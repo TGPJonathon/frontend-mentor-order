@@ -1,0 +1,158 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-paleblue-100: hsl(225, 100%, 98%);
+  --clr-paleblue-200: hsl(225, 100%, 94%);
+  --clr-primary-brightblue-400: hsl(245, 75%, 52%);
+  --clr-desaturatedblue-400: hsl(224, 23%, 55%);
+  --clr-darkblue-800: hsl(223, 47%, 23%);
+
+  --ff-primary: "Red Hat Display", sans-serif;
+}
+body {
+  min-height: 100svh;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-paleblue-200);
+}
+main {
+  min-height: inherit;
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+p {
+  max-width: 75ch;
+  color: var(--clr-desaturatedblue-400);
+}
+
+.card {
+  max-width: min(90%, 330px);
+  margin: 1rem 1rem;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.card-image {
+  border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.card-content > p:first-of-type {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.card-sub {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--clr-paleblue-100);
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-plan {
+  margin-right: 1.8rem;
+}
+
+.card-plan > p:first-child {
+  font-weight: 900;
+  color: black;
+}
+
+.card-plan > p:last-child {
+  color: var(--clr-desaturatedblue-400);
+}
+
+.sub-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--clr-primary-brightblue-400);
+  font-weight: 900;
+}
+
+.card-payment {
+  background-color: var(--clr-primary-brightblue-400);
+  padding: 0.8rem 3rem;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  -webkit-box-shadow: 0px 32px 26px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 32px 26px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 32px 26px 0px rgba(0, 0, 0, 0.09);
+}
+
+.card-cancel {
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
