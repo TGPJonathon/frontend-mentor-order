@@ -123,6 +123,7 @@ p {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 
   @media (max-width: 360px) {
     flex-direction: column;
